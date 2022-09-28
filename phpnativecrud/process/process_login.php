@@ -5,7 +5,7 @@ require_once('../function/koneksi.php');
 
 // Menangkap request
 $username = $_POST['username'];
-$password = md5($_POST['password']);
+$password = $_POST['password'];
 
 $query = mysqli_query($koneksi, "SELECT * FROM admin WHERE username = '$username' AND password = '$password'");
 
